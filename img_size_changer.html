@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image size changer</title>
+</head>
+<body>
+    <style>
+        .d1{
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+    <script>
+        function Action(size){
+    
+         var img= document.getElementById('img1');
+         if(size=="50 X 50"){
+            img.height = 50;
+            img.width = 50;
+          }else if(size=="60 X 60"){
+             img.height = 60;
+             img.width = 60;
+          } else if(size=="70 X 70"){
+             img.height = 70;
+             img.width = 70;
+          } else if(size=="100 X 100"){
+             img.height = 100;
+             img.width = 100;
+          }
+        }
+        
+    </script>
+    <label>choose Size</label>
+    <select name="size" id="size" onchange="Action(value)">
+        <option value="50 X 50" id="50px">50 X 50</option>
+        <option value="60 X 60" id="60px">60 X 60</option>
+        <option value="70 X 70" id="70px">70 X 70</option>
+        <option value="100 X 100" id="100px">100 X 100</option>
+    </select>
+    <div id="d1">
+        <img src="images/mountain.jpg" alt="mountain" id="img1">
+    </div>
+   
+</body>
+</html>
